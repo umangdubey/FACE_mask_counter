@@ -1,0 +1,13 @@
+Whole project divided in 4 part :
+1.First part is making a decent dataset in two label of mask and without mask:
+ 	In this part we use data agumentation method. With help of data agumentation we are able to make different type of 		image from one image by flipping it vertical,shifting to right and left side. And saving in two label one with mask 		and without mask.
+
+2.Second part is data preprocessing :
+	In this part first we label the image like this:{'without mask': 0, 'with mask': 1}.
+	Then converting the image BGR image to Gray scale image by using OPEN_cv.After that resizing the image & reshape it.
+
+3.Third part is Training the model:
+	In this part we use keras and tensorflow library by which make the model with input_layer,2 hidden layer and one 	 flatten layer.Then by use of sklearn we spit the dataset in train and test part.After training and evaluating the 		model we save it by using the keras save model function.
+
+4.Forth part is predicting it on live cam:
+	In this part we use OPEN_CV , front_face_detection haarcascade pretrained model.Detecting the front face with help 		of cascase model we predict the mask and no mask by our saved model.if no mask is found it detect the age and 		gender of the person and save the face image of person in defined folder. 
